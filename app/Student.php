@@ -48,14 +48,16 @@ class Student extends Model
      *
      * @return array
      */
-    public static function getSchoolDropdown() {
-        $students = Student::orderBy('school', 'ASC')->get();
+    public static function getStudentDropdown() {
+        $students = Student::orderBy('last_name', 'ASC')->orderBy('first_name', 'ASC')->get();
 
         $students_for_dropdown = [];
         foreach($students as $student) {
-            $students_for_dropdown[$student->id] = $student->last_name.', '.$student->first_name;
+            $students_for_dropdown[$student->id] = $student->last_name.', '.$student->first_name.' ('.$student->school->name.')';
         }
 
-        return $schools_for_dropdown;
+        return $students_for_dropdown;
+
+
     }
 }

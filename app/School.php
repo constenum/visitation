@@ -35,11 +35,11 @@ class School extends Model
      * @return array
      */
     public static function getSchoolDropdown() {
-        $schools = School::orderBy('school', 'ASC')->get();
+        $schools = School::orderBy('name', 'ASC')->get();
 
         $schools_for_dropdown = [];
         foreach($schools as $school) {
-            $schools_for_dropdown[$school->id] = $school->school.' ('.$chool->city.')';
+            $schools_for_dropdown[$school->id] = $school->school.' ('.$school->city.')';
         }
 
         return $schools_for_dropdown;
