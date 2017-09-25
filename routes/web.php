@@ -15,7 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*
+/**
+ * Authentication routes
+ */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+/**
 * Student resource
 */
 # Index page to show all student
@@ -42,7 +49,7 @@ Route::name('student.destroy')->get('/student/{id}/delete', 'StudentController@d
 # Delete route to actually destroy the Student
 Route::name('student.destroy')->delete('/student/{id}', 'StudentController@destroy');
 
-/*
+/**
 * School resource
 */
 # Index page to show all school
