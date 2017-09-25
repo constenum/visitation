@@ -41,7 +41,7 @@ Route::name('student.show')->get('/student/{title}', 'StudentController@show');
 Route::name('student.edit')->get('/student/{id}/edit', 'StudentController@edit');
 
 # Process form to edit a Student
-Route::name('update')->put('/student/{id}', 'StudentController@update');
+Route::name('student.update')->put('/student/{id}', 'StudentController@update');
 
 # Get route to confirm deletion of Student
 Route::name('student.destroy')->get('/student/{id}/delete', 'StudentController@delete');
@@ -68,7 +68,7 @@ Route::name('school.show')->get('/school/{title}', 'SchoolController@show');
 Route::name('school.edit')->get('/school/{id}/edit', 'SchoolController@edit');
 
 # Process form to edit a School
-Route::name('update')->put('/school/{id}', 'SchoolController@update');
+Route::name('school.update')->put('/school/{id}', 'SchoolController@update');
 
 # Get route to confirm deletion of School
 Route::name('school.destroy')->get('/school/{id}/delete', 'SchoolController@delete');
@@ -95,7 +95,7 @@ Route::name('visitation.show')->get('/visitation/{title}', 'VisitationController
 Route::name('visitation.edit')->get('/visitation/{id}/edit', 'VisitationController@edit');
 
 # Process form to edit a Visitation
-Route::name('update')->put('/visitation/{id}', 'VisitationController@update');
+Route::name('visitation.update')->put('/visitation/{id}', 'VisitationController@update');
 
 # Get route to confirm deletion of Visitation
 Route::name('visitation.destroy')->get('/visitation/{id}/delete', 'VisitationController@delete');
