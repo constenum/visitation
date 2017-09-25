@@ -75,3 +75,30 @@ Route::name('school.destroy')->get('/school/{id}/delete', 'SchoolController@dele
 
 # Delete route to actually destroy the School
 Route::name('school.destroy')->delete('/school/{id}', 'SchoolController@destroy');
+
+/**
+ * Visitation resource
+ */
+# Index page to show all visitation
+Route::name('visitation.index')->get('/visitation', 'VisitationController@index');
+
+# Show form to create a new Visitation
+Route::name('visitation.create')->get('/visitation/create', 'VisitationController@create');
+
+# Process the form to create a new Visitation
+Route::name('visitation.store')->post('/visitation', 'VisitationController@store');
+
+# Show an individual Visitation
+Route::name('visitation.show')->get('/visitation/{title}', 'VisitationController@show');
+
+# Show form to edit a Visitation
+Route::name('visitation.edit')->get('/visitation/{id}/edit', 'VisitationController@edit');
+
+# Process form to edit a Visitation
+Route::name('update')->put('/visitation/{id}', 'VisitationController@update');
+
+# Get route to confirm deletion of Visitation
+Route::name('visitation.destroy')->get('/visitation/{id}/delete', 'VisitationController@delete');
+
+# Delete route to actually destroy the Visitation
+Route::name('visitation.destroy')->delete('/visitation/{id}', 'VisitationController@destroy');
