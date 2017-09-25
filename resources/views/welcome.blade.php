@@ -1,95 +1,24 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+@section('content')
+    <div class="container">
+        <div class="main-links row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <a class="btn btn-lg btn-block btn-primary" href="{{ url('/visitation') }}" role="button">Visitation</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Open House</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Shadow</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 1</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 2</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 3</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 4</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 5</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 6</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 7</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 8</a>
+                <a class="btn btn-lg btn-block btn-primary" href="#" role="button">Camp 9</a>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+@endsection
