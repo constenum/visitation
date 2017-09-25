@@ -30,6 +30,7 @@ class CreateStudentsTable extends Migration
             $table->string('mother_last_name')->nullable();
             $table->string('father_first_name')->nullable();
             $table->string('father_last_name')->nullable();
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
 
             /**
