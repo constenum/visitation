@@ -1,0 +1,3 @@
+.main-links a:nth-child(n+2) {
+    margin: 2em 0;
+}
