@@ -31,7 +31,9 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('student/create');
+        # get all schools
+        $schools = School::all();
+        return view('student/create')->with(['schools' => $schools]);
     }
 
     /**
@@ -42,7 +44,25 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $student = new Student();
+        $student->school_id = $request->input('school_id');
+        $student->first_name = $request->input('first_name');
+        $student->last_name = $request->input('last_name');
+        $student->preferred_name = $request->input('preferred_name');
+        $student->street_address = $request->input('street_address');
+        $student->city = $request->input('city');
+        $student->state = $request->input('state');
+        $student->zip_code = $request->input('zip_code');
+        $student->telephone_number = $request->input('telephone_number');
+        $student->grade = 8;
+        $student->phone_type = $request->input('phone_type');
+        $student->mother_first_name = $request->input('mother_first_name');
+        $student->mother_last_name = $request->input('mother_last_name');
+        $student->father_first_name = $request->input('father_first_name');
+        $student->father_last_name = $request->input('father_last_name');
+        $student->save();
+
+        return redirect('/student');
     }
 
     /**

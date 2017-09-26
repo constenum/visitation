@@ -83,8 +83,6 @@
         //        function changeEventHandler(event) {
         //            var optionValue = event.target.value;
         //            alert('You selected ' + optionValue);
-        //
-        //            var tableRows = document.getElementById('Schools')
         //        }
 
         //        $(document).ready(function () {
@@ -113,6 +111,5 @@
         //                alert($(this).find(":selected").val());
         //            });
         //        });
-
     </script>
 @endsection
