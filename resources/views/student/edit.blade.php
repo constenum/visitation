@@ -124,14 +124,12 @@
                                value="{{ $student->father_last_name }}">
                     </div>
                 </div>
-                <hr>
                 <div class="form-group">
                     <div class="pull-right">
                         <button type="reset" class="btn btn-lg btn-danger reset">Reset</button>
                         <button type="submit" class="btn btn-lg btn-primary">Check In</button>
                     </div>
                 </div>
-                <hr>
             </form>
         </div>
     </div>

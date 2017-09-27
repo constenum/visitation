@@ -50,12 +50,10 @@
                     </table>
                 </div>
 
-                <hr>
                 <div class="spacing">
                     <a class="button btn btn-lg btn-primary btn-block" href="/student/create">
                         Click here if you don't see your name above</a>
                 </div>
-                <hr>
             </div>
         </div>
     </div>
