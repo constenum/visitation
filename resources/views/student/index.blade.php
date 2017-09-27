@@ -7,6 +7,10 @@
                 <h1>Welcome to St. Ursula Academy</h1>
                 <h4>Select your school and then click check in next to your name</h4>
 
+                @if(Session::has('flash_message'))
+                    <div class= "spacing alert alert-success">{{ Session::get('flash_message') }}</div>
+                @endif
+
                 <div class="spacing">
                     <div class="form-group">
                         <select name="school_id" id="schools" class="form-control">

@@ -4,15 +4,15 @@
     <div class="container">
         <div class="row">
             <h1>Student Information</h1>
-            <h4>Please enter your information</h4>
+            <h4>Please enter your information to check in</h4>
 
-            <form class="spacing form-horizontal" method="POST" action="/student">
+            <form class="form-horizontal" role="form" method="POST" action="/student">
                 {{ csrf_field() }}
 
                 <div class="form-group">
                     <label for="school_id" class="col-md-2 control-label">School</label>
                     <div class="col-md-10">
-                        <select name="school_id" id="school_id" class="form-control">
+                        <select name="school_id" id="school_id" class="form-control input-sm">
                             <option value="">Select Your School</option>
                             <option value="" disabled="">-------------------</option>
                             @foreach($schools as $school)
@@ -25,14 +25,14 @@
                 <div class="form-group">
                     <label for="first_name" class="col-md-2 control-label">First Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="first_name" name="first_name"
+                        <input type="text" class="form-control input-sm" id="first_name" name="first_name"
                                value="{{ old('first_name') }}"
                                autofocus>
                     </div>
 
                     <label for="preferred_name" class="col-md-2 control-label">Preferred Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="preferred_name" name="preferred_name"
+                        <input type="text" class="form-control input-sm" id="preferred_name" name="preferred_name"
                                value="{{ old('preferred_name') }}">
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                 <div class="form-group">
                     <label for="last_name" class="col-md-2 control-label">Last Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="last_name" name="last_name"
+                        <input type="text" class="form-control input-sm" id="last_name" name="last_name"
                                value="{{ old('last_name') }}">
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <label for="street_address" class="col-md-2 control-label">Street Address</label>
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="street_address" name="street_address"
+                        <input type="text" class="form-control input-sm" id="street_address" name="street_address"
                                value="{{ old('street_address') }}">
                     </div>
                 </div>
@@ -56,12 +56,12 @@
                 <div class="form-group">
                     <label for="city" class="col-md-2 control-label">City</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}">
+                        <input type="text" class="form-control input-sm" id="city" name="city" value="{{ old('city') }}">
                     </div>
 
                     <label for="state" class="col-md-1 control-label">State</label>
                     <div class="col-md-1">
-                        <select name="state" id="state" class="form-control">
+                        <select name="state" id="state" class="form-control input-sm">
                             <option value="OH">OH</option>
                             <option value="MI">MI</option>
                         </select>
@@ -69,7 +69,7 @@
 
                     <label for="zip_code" class="col-md-1 control-label">Zip Code</label>
                     <div class="col-md-3">
-                        <input type="text" class="form-control" id="zip_code" name="zip_code"
+                        <input type="text" class="form-control input-sm" id="zip_code" name="zip_code"
                                value="{{ old('zip_code') }}">
                     </div>
                 </div>
@@ -77,13 +77,13 @@
                 <div class="form-group">
                     <label for="telephone_number" class="col-md-2 control-label">Telephone Number</label>
                     <div class="col-md-4">
-                        <input type="tel" class="form-control" id="telephone_number" name="telephone_number"
+                        <input type="tel" class="form-control input-sm" id="telephone_number" name="telephone_number"
                                value="{{ old('telephone_number') }}">
                     </div>
 
                     <label for="phone_type" class="col-md-2 control-label">Phone Type</label>
                     <div class="col-md-4">
-                        <select name="phone_type" id="phone_type" class="form-control">
+                        <select name="phone_type" id="phone_type" class="form-control input-sm">
                             <option value="">Select Phone Type</option>
                             <option value="" disabled>------------------------------</option>
                             <option value="home">Home Phone</option>
@@ -97,13 +97,13 @@
                 <div class="form-group">
                     <label for="mother_first_name" class="col-md-2 control-label">Mother's First Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="mother_first_name" name="mother_first_name"
+                        <input type="text" class="form-control input-sm" id="mother_first_name" name="mother_first_name"
                                value="{{ old('first_name') }}">
                     </div>
 
                     <label for="mother_last_name" class="col-md-2 control-label">Mother's Last Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="mother_last_name" name="mother_last_name"
+                        <input type="text" class="form-control input-sm" id="mother_last_name" name="mother_last_name"
                                value="{{ old('first_name') }}">
                     </div>
                 </div>
@@ -111,13 +111,13 @@
                 <div class="form-group">
                     <label for="father_first_name" class="col-md-2 control-label">Father's First Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="father_first_name" name="father_first_name"
+                        <input type="text" class="form-control input-sm" id="father_first_name" name="father_first_name"
                                value="{{ old('first_name') }}">
                     </div>
 
                     <label for="father_last_name" class="col-md-2 control-label">Father's Last Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="father_last_name" name="father_last_name"
+                        <input type="text" class="form-control input-sm" id="father_last_name" name="father_last_name"
                                value="{{ old('first_name') }}">
                     </div>
                 </div>
